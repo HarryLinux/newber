@@ -1,0 +1,20 @@
+export const IMAGES = {
+  MapStyle: "mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph",
+  UberX: "https://i.ibb.co/cyvcpfF/uberx.png",
+  UberXL: "https://i.ibb.co/YDYMKny/uberxl.png",
+  UberBlack: "https://i.ibb.co/Xx4G91m/uberblack.png",
+  UberBlackSUV: "https://i.ibb.co/1nStPWT/uberblacksuv.png",
+  UberLogo: "https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg",
+  UberLogoLogin: "https://i.ibb.co/n6LWQM4/Post.png",
+  LoginImage: "https://i.ibb.co/CsV9RYZ/login-image.png",
+  BikeImage: "https://i.ibb.co/n776JLm/bike.png",
+  ScheduleImage: "https://i.ibb.co/5RjchBg/uberschedule.png",
+  BackButton: "https://img.icons8.com/ios-filled/50/000000/left.png",
+  CircleIcon: "https://img.icons8.com/ios-filled/50/9CA3AF/filled-circle.png",
+  Line: "https://img.icons8.com/ios/50/9CA3AF/vertical-line.png",
+  SquareIcon: "https://img.icons8.com/windows/50/000000/square-full.png",
+  PlusIcon: "https://img.icons8.com/ios/50/000000/plus-math.png",
+  StarIcon: "https://img.icons8.com/ios-filled/50/ffffff/star--v1.png",
+  UserImage:
+    "https://media-exp1.licdn.com/dms/image/C4D03AQHzwbRg-sUf9Q/profile-displayphoto-shrink_200_200/0/1532031577426?e=1648684800&v=beta&t=ySUsF4wcOsiRJmSmvtutc3-Omrun9Wx3vTT2p32zUEg",
+};
