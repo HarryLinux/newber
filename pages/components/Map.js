@@ -7,7 +7,7 @@ import { MAPBOXGL_TOKEN } from "../../secrets";
 mapboxgl.accessToken = MAPBOXGL_TOKEN;
 
 const Wrapper = tw.div`
-  flex-1
+  flex-1 h-1/2
 `;
 
 const Map = (props) => {

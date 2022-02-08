@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import tw from "tailwind-styled-components";
 import Map from "./components/Map";
+import RideSelector from "./components/RideSelector";
 import { MAPBOXGL_TOKEN } from "../secrets";
 import { useRouter } from "next/router";
 
@@ -52,9 +53,11 @@ const Confirm = () => {
       />
       <RideContainer>
         {/* Ride Selector Container */}
-        Ride Selector
+        <RideSelector />
         {/* Confirm Button Container */}
-        Confirm Button
+        <ConfirmButtonContainer>
+          <ConfirmButton>Confirm UberX</ConfirmButton>
+        </ConfirmButtonContainer>
       </RideContainer>
     </Wrapper>
   );
@@ -67,5 +70,13 @@ const Wrapper = tw.div`
 `;
 
 const RideContainer = tw.div`
-  flex-1
+  flex flex-col flex-1 h-1/2
+`;
+
+const ConfirmButtonContainer = tw.div`
+  border-t-2
+`;
+
+const ConfirmButton = tw.div`
+  bg-black text-white my-4 mx-4 py-4 text-center text-xl
 `;
