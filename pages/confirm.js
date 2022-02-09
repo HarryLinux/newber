@@ -4,13 +4,15 @@ import Map from "./components/Map";
 import RideSelector from "./components/RideSelector";
 import { MAPBOXGL_TOKEN } from "../secrets";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import { IMAGES } from "../styles/assets";
 
 const Confirm = () => {
   const router = useRouter();
   const { pickup, dropoff } = router.query;
 
-  const [pickupCoordinates, setPickupCoordinates] = useState();
-  const [dropoffCoordinates, setDropoffCoordinates] = useState();
+  const [pickupCoordinates, setPickupCoordinates] = useState([0, 0]);
+  const [dropoffCoordinates, setDropoffCoordinates] = useState([0, 0]);
 
   const getPickupCoordinates = (pickup) => {
     fetch(
@@ -47,13 +49,21 @@ const Confirm = () => {
 
   return (
     <Wrapper>
+      <ButtonContainer>
+        <Link href="/search">
+          <BackButton src={IMAGES.BackButton} />
+        </Link>
+      </ButtonContainer>
       <Map
         pickupCoordinates={pickupCoordinates}
         dropoffCoordinates={dropoffCoordinates}
       />
       <RideContainer>
         {/* Ride Selector Container */}
-        <RideSelector />
+        <RideSelector
+          pickupCoordinates={pickupCoordinates}
+          dropoffCoordinates={dropoffCoordinates}
+        />
         {/* Confirm Button Container */}
         <ConfirmButtonContainer>
           <ConfirmButton>Confirm UberX</ConfirmButton>
@@ -79,4 +89,12 @@ const ConfirmButtonContainer = tw.div`
 
 const ConfirmButton = tw.div`
   bg-black text-white my-4 mx-4 py-4 text-center text-xl
+`;
+
+const ButtonContainer = tw.div`
+  rounded-full absolute top-4 left-4 z-10 bg-white shadow-md cursor-pointer
+`;
+
+const BackButton = tw.img`
+  h-full object-contain transform hover:scale-105 transition
 `;
